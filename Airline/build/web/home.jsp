@@ -106,7 +106,7 @@
 									<div class="smooth-menu">	  
 									<ul class="nav navbar-nav navbar-right">
 										<li><a href="#">home</a></li>
-										<li><a href="book.jsp">Book</a></li>
+										
 										<li><a href="Manage.jsp">Manage </a></li>
 										<li><a href="Experiance.jsp">Experience</a></li>
 										<li><a href="Login.jsp">Login</a></li><!--/.project-btn--> 
@@ -156,7 +156,7 @@
 		</section><!--/.about-us-->
 		<!--about-us end -->
 
-		<!--travel-box start-->
+                <form action="searchResults.jsp" method="POST">
 		<section  class="travel-box">
         	<div class="container">
         		<div class="row">
@@ -166,19 +166,7 @@
 
 								<ul class="nav nav-tabs" role="tablist">
 
-									<!-- <li role="presentation" class="active">
-									 	<a href="#tours" aria-controls="tours" role="tab" data-toggle="tab">
-									 		<i class="fa fa-tree"></i>
-									 		tours
-									 	</a>
-									</li>
-
-									<li role="presentation">
-										<a href="#hotels" aria-controls="hotels" role="tab" data-toggle="tab">
-											<i class="fa fa-building"></i>
-											hotels
-										</a>
-									</li> -->
+									
 
 									<li role="presentation" class="active">
 									 	<a href="#flights" aria-controls="flights" role="tab" data-toggle="tab">
@@ -194,24 +182,7 @@
 									
 									<div role="tabpanel" class="tab-pane active fade in" id="flights">
 										<div class="tab-para">
-											<div class="trip-circle">
-												<div class="single-trip-circle">
-													<input type="radio" id="radio01" name="radio" />
-  													<label for="radio01">
-  														<span class="round-boarder">
-  															<span class="round-boarder1"></span>
-  														</span>round trip
-  													</label>
-												</div><!--/.single-trip-circle-->
-												<div class="single-trip-circle">
-													<input type="radio" id="radio02" name="radio" />
-  													<label for="radio02">
-  														<span class="round-boarder">
-  															<span class="round-boarder1"></span>
-  														</span>on way
-  													</label>
-												</div><!--/.single-trip-circle-->
-											</div><!--/.trip-circle-->
+                                                                                    
 											<div class="row">
 												<div class="col-lg-4 col-md-4 col-sm-12">
 													<div class="single-tab-select-box">
@@ -219,11 +190,11 @@
 														<h2>from</h2>
 
 														<div class="travel-select-icon">
-															<select class="form-control ">
+                                                                                                                    <select name="from" class="form-control ">
 
-															  	<option value="default">enter your location</option><!-- /.option-->
+															  	<option  value="default">enter your location</option><!-- /.option-->
 
-															  	<option value="turkey">turkey</option><!-- /.option-->
+															  	<option  value="Katunayake">Katunayake</option><!-- /.option-->
 
 															  	<option value="russia">russia</option><!-- /.option-->
 															  	<option value="egept">egypt</option><!-- /.option-->
@@ -237,10 +208,10 @@
 													<div class="single-tab-select-box">
 														<h2>departure</h2>
 														<div class="travel-check-icon">
-															<form action="#">
+													
 																<input type="text" name="departure" class="form-control" data-toggle="datepicker"
 																placeholder="12 -01 - 2017 ">
-															</form>
+															
 														</div><!-- /.travel-check-icon -->
 													</div><!--/.single-tab-select-box-->
 												</div><!--/.col-->
@@ -249,9 +220,9 @@
 													<div class="single-tab-select-box">
 														<h2>return</h2>
 														<div class="travel-check-icon">
-															<form action="#">
+															
 																<input type="text" name="return" class="form-control" data-toggle="datepicker" placeholder="22 -01 - 2017 ">
-															</form>
+															
 														</div><!-- /.travel-check-icon -->
 													</div><!--/.single-tab-select-box-->
 												</div><!--/.col-->
@@ -262,12 +233,12 @@
 														<div class="travel-select-icon">
 															<select class="form-control ">
 
-															  	<option value="default">5</option><!-- /.option-->
+															  	<option value="default">1</option><!-- /.option-->
 
-															  	<option value="10">10</option><!-- /.option-->
+															  	<option value="2">2</option><!-- /.option-->
 
-															  	<option value="15">15</option><!-- /.option-->
-															  	<option value="20">20</option><!-- /.option-->
+															  	<option value="3">3</option><!-- /.option-->
+															  	<option value="4">4</option><!-- /.option-->
 
 															</select><!-- /.select-->
 														</div><!-- /.travel-select-icon -->
@@ -284,9 +255,8 @@
 
 															  	<option value="2">2</option><!-- /.option-->
 
-															  	<option value="4">4</option><!-- /.option-->
-															  	<option value="8">8</option><!-- /.option-->
-
+															  	<option value="3">3</option><!-- /.option-->
+															  	<option value="4">4</option>
 															</select><!-- /.select-->
 														</div><!-- /.travel-select-icon -->
 													</div><!--/.single-tab-select-box-->
@@ -301,11 +271,11 @@
 														<h2>to</h2>
 
 														<div class="travel-select-icon">
-															<select class="form-control ">
+                                                                                                                    <select name="to" class="form-control ">
 
 															  	<option value="default">enter your destination location</option><!-- /.option-->
 
-															  	<option value="istambul">istambul</option><!-- /.option-->
+															  	<option value="Istambul">Istambul</option><!-- /.option-->
 
 															  	<option value="mosko">mosko</option><!-- /.option-->
 															  	<option value="cairo">cairo</option><!-- /.option-->
@@ -320,15 +290,14 @@
 
 														<h2>class</h2>
 														<div class="travel-select-icon">
-															<select class="form-control ">
+                                                                                                                    <select class="form-control " required="">
 
 															  	<option value="default">enter class</option><!-- /.option-->
 
-															  	<option value="A">A</option><!-- /.option-->
+															  	<option value="">Business Class</option><!-- /.option-->
 
-															  	<option value="B">B</option><!-- /.option-->
-															  	<option value="C">C</option><!-- /.option-->
-
+															  	<option value="B">Economy Class</option><!-- /.option-->
+															  	
 															</select><!-- /.select-->
 														</div><!-- /.travel-select-icon -->
 													</div><!--/.single-tab-select-box-->
@@ -354,9 +323,8 @@
         		</div><!--/.row-->
         	</div><!--/.container-->
 
-        </section><!--/.travel-box-->
-		<!--travel-box end-->
-
+        </section>
+                </form>
             
 
 
